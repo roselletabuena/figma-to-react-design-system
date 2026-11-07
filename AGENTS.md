@@ -11,6 +11,16 @@ All visual styling in this repository must strictly adhere to the Simple Design 
 
 ---
 
+## Component Architecture & Storybook Standard (Mandatory)
+All UI components must adhere to the 5-file co-located structure and include Storybook stories with dark mode and a11y tests. Detailed rule: [`.agents/rules/component-architecture.md`](file:///c:/Users/ADMIN/workspace/design-to-component/.agents/rules/component-architecture.md).
+
+### Core Structure:
+- Category layout: `src/components/<category>/<ComponentName>/`
+- Co-located files: `.tsx`, `.types.ts`, `.stories.tsx`, `.test.tsx`, `index.ts`
+- Barrel export in `src/components/index.ts` and `src/index.ts`
+
+---
+
 ## Codebase Knowledge Graph (Graphify)
 This repository includes the `graphify` skill (in `.agents/skills/graphify`). Detailed rule: [`.agents/rules/graphify.md`](file:///c:/Users/ADMIN/workspace/design-to-component/.agents/rules/graphify.md).
 
