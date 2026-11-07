@@ -1,0 +1,156 @@
+/* Material 3 Top App Bar: Small-centered, Elevation Flat */
+:root {
+  --m3-sys-light-surface: #fef7ff;
+  --m3-sys-light-on-surface: #1d1b20;
+  --m3-sys-light-on-surface-variant: #49454f;
+  --m3-sys-light-surface-container-highest: #e6e0e9;
+}
+
+.m3-top-app-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 412px;
+  height: 64px;
+  padding: 8px 4px;
+  box-sizing: border-box;
+  background-color: var(--m3-sys-light-surface);
+  position: relative;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* Leading Icon Button (48x48 touch target, 40x40 state layer) */
+.m3-top-app-bar__leading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  z-index: 1;
+}
+
+.m3-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--m3-sys-light-on-surface);
+  outline: none;
+}
+
+.m3-icon-button__state-layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: background-color 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-icon-button:hover .m3-icon-button__state-layer {
+  background-color: rgba(29, 27, 32, 0.08);
+}
+
+.m3-icon-button:focus-visible .m3-icon-button__state-layer {
+  background-color: rgba(29, 27, 32, 0.12);
+}
+
+.m3-icon-button:active .m3-icon-button__state-layer {
+  background-color: rgba(29, 27, 32, 0.12);
+}
+
+.m3-icon {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Text Content: Centered Title + Optional Supporting Text */
+.m3-top-app-bar__text-content {
+  position: absolute;
+  left: 56px;
+  right: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  pointer-events: none;
+}
+
+.m3-top-app-bar__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--m3-sys-light-on-surface);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.m3-top-app-bar__supporting-text {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: var(--m3-sys-light-on-surface-variant);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+/* Trailing Elements (Avatar / Action button) */
+.m3-top-app-bar__trailing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  z-index: 1;
+}
+
+.m3-avatar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 50%;
+  outline: none;
+}
+
+.m3-avatar-image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.m3-avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--m3-sys-light-surface-container-highest);
+  color: var(--m3-sys-light-on-surface-variant);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
