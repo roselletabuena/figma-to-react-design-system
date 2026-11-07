@@ -1,0 +1,6 @@
+{
+  "name": "figma-mcp",
+  "displayName": "Figma MCP (Project)",
+  "version": "1.0.0",
+  "description": "Project-scoped Figma Developer MCP server for design-to-component workflows"
+}

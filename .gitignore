@@ -30,3 +30,8 @@ storybook-static
 graphify-out/
 __pycache__/
 *.pyc
+
+# Project credentials (DO NOT COMMIT)
+.env
+.env.*
+!.env.example
