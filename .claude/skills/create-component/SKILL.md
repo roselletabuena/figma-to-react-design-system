@@ -38,3 +38,6 @@ Use this skill whenever asked to create, implement, or scaffold a new component 
    - Run `npm run test:visual:update` (or `npm run test:visual`) to capture/verify Playwright screenshot baselines.
    - Run `npm run lint` to confirm zero lint errors.
    - Ensure WCAG AA contrast and no raw hex/color values are used.
+
+5. **Open the Pull Request**:
+   - Once step 4 passes, follow the `create-component-pr` skill: it captures Storybook screenshots of every variant and size in light and dark mode, and opens a PR whose description embeds them for review.
