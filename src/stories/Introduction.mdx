@@ -1,0 +1,35 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Design System/Introduction" />
+
+# Simple Design System (SDS)
+
+Welcome to the **Simple Design System** component library documentation.
+
+This library bridges design intentions in Figma with production-ready React components using a multi-tiered token architecture.
+
+---
+
+## 🎨 Architectural Principles
+
+### 1. Multi-Tier Token Hierarchy
+* **Primitives**: Core raw scales for colors, dimensions, and typography.
+* **Semantics**: Context-aware aliases (`bg-surface`, `text-text-default`, `border-border-default`) that adapt automatically across themes.
+* **Consumables**: Tailwind CSS v4 `@theme` utility classes and typed TypeScript constants.
+
+### 2. Dual Mode Theming
+Every component seamlessly supports both **Light Mode** and **Dark Mode** via system preference (`prefers-color-scheme`) and manual overrides (`.dark` class / `data-theme="dark"`).
+
+### 3. Accessibility by Default
+All semantic color pairs meet WCAG 2.1 AA contrast requirements ($\ge 4.5:1$ for normal text, $\ge 3:1$ for large text and interactive components).
+
+---
+
+## 📦 Getting Started
+
+Import the precompiled design system stylesheet in your app's entry point:
+
+```tsx
+import '@simple-design-system/components/style.css';
+import { TopAppBar } from '@simple-design-system/components';
+```
