@@ -1,0 +1,63 @@
+/**
+ * Simple Design System (SDS) - Size & Space Primitives
+ * Direct 1:1 mapping with Figma SDS Variables (@size)
+ */
+:root {
+  /* Blur */
+  --sds-size-blur-100: 0.25rem;
+
+  /* Depth / Elevation Offsets */
+  --sds-size-depth-0: 0rem;
+  --sds-size-depth-025: 0.0625rem;
+  --sds-size-depth-100: 0.25rem;
+  --sds-size-depth-200: 0.5rem;
+  --sds-size-depth-400: 1rem;
+  --sds-size-depth-800: 2rem;
+  --sds-size-depth-1200: 3rem;
+
+  /* Negative Depth Offsets */
+  --sds-size-depth-negative-025: -0.0625rem;
+  --sds-size-depth-negative-100: -0.25rem;
+  --sds-size-depth-negative-200: -0.5rem;
+  --sds-size-depth-negative-400: -1rem;
+  --sds-size-depth-negative-800: -2rem;
+  --sds-size-depth-negative-1200: -3rem;
+
+  /* Icon Dimensions */
+  --sds-size-icon-small: 1.5rem;   /* 24px */
+  --sds-size-icon-medium: 2rem;    /* 32px */
+  --sds-size-icon-large: 2.5rem;   /* 40px */
+
+  /* Border Radii */
+  --sds-size-radius-100: 0.25rem;  /* 4px */
+  --sds-size-radius-200: 0.5rem;   /* 8px */
+  --sds-size-radius-400: 1rem;     /* 16px */
+  --sds-size-radius-full: 9999px;
+
+  /* Spacing Scale */
+  --sds-size-space-0: 0rem;
+  --sds-size-space-050: 0.125rem;  /* 2px */
+  --sds-size-space-100: 0.25rem;   /* 4px */
+  --sds-size-space-150: 0.375rem;  /* 6px */
+  --sds-size-space-200: 0.5rem;    /* 8px */
+  --sds-size-space-300: 0.75rem;   /* 12px */
+  --sds-size-space-400: 1rem;      /* 16px */
+  --sds-size-space-600: 1.5rem;    /* 24px */
+  --sds-size-space-800: 2rem;      /* 32px */
+  --sds-size-space-1200: 3rem;     /* 48px */
+  --sds-size-space-1600: 4rem;     /* 64px */
+  --sds-size-space-2400: 6rem;     /* 96px */
+  --sds-size-space-4000: 10rem;    /* 160px */
+
+  /* Negative Spacing Scale */
+  --sds-size-space-negative-100: -0.25rem;
+  --sds-size-space-negative-200: -0.5rem;
+  --sds-size-space-negative-300: -0.75rem;
+  --sds-size-space-negative-400: -1rem;
+  --sds-size-space-negative-600: -1.5rem;
+
+  /* Stroke / Border Widths */
+  --sds-size-stroke-border: 0.0625rem;      /* 1px */
+  --sds-size-stroke-focus-ring: 0.125rem;   /* 2px */
+}
+

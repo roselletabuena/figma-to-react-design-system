@@ -1,0 +1,15 @@
+/**
+ * Simple Design System (SDS) - Unified Theme
+ * Centralized import for all primitive tokens, semantic modes, and effect styles.
+ */
+
+/* Primitives (Base Scales) */
+@import "./primitives/colors.css";
+@import "./primitives/size.css";
+@import "./primitives/typography.css";
+
+/* Semantics (Intent-driven & Themed) */
+@import "./semantics/colors.css";
+@import "./semantics/typography.css";
+@import "./semantics/effects.css";
+

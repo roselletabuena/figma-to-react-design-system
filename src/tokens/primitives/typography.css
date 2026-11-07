@@ -1,0 +1,43 @@
+/**
+ * Simple Design System (SDS) - Typography Primitives
+ * Direct 1:1 mapping with Figma SDS Variables (@typography_primitives)
+ */
+:root {
+  /* Font Families */
+  --sds-typography-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --sds-typography-family-serif: "Noto Serif", Georgia, Cambria, "Times New Roman", Times, serif;
+  --sds-typography-family-mono: "Roboto Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Type Size Scale */
+  --sds-typography-scale-01: 0.75rem;    /* 12px */
+  --sds-typography-scale-02: 0.875rem;   /* 14px */
+  --sds-typography-scale-03: 1rem;       /* 16px */
+  --sds-typography-scale-04: 1.25rem;    /* 20px */
+  --sds-typography-scale-05: 1.5rem;     /* 24px */
+  --sds-typography-scale-06: 2rem;       /* 32px */
+  --sds-typography-scale-07: 2.5rem;     /* 40px */
+  --sds-typography-scale-08: 3rem;       /* 48px */
+  --sds-typography-scale-09: 4rem;       /* 64px */
+  --sds-typography-scale-10: 4.5rem;     /* 72px */
+
+  /* Font Weights */
+  --sds-typography-weight-thin: 100;
+  --sds-typography-weight-thin-italic: 100 italic;
+  --sds-typography-weight-extra-light: 200;
+  --sds-typography-weight-extralight-italic: 200 italic;
+  --sds-typography-weight-light: 300;
+  --sds-typography-weight-light-italic: 300 italic;
+  --sds-typography-weight-regular: 400;
+  --sds-typography-weight-regular-italic: italic;
+  --sds-typography-weight-medium: 500;
+  --sds-typography-weight-medium-italic: 500 italic;
+  --sds-typography-weight-semibold: 600;
+  --sds-typography-weight-semibold-italic: 600 italic;
+  --sds-typography-weight-bold: 700;
+  --sds-typography-weight-bold-italic: 700 italic;
+  --sds-typography-weight-extra-bold: 800;
+  --sds-typography-weight-extra-bold-italic: 800 italic;
+  --sds-typography-weight-black: 900;
+  --sds-typography-weight-black-italic: 900 italic;
+}
+

@@ -1,0 +1,114 @@
+/**
+ * Simple Design System (SDS) - Color Primitives
+ * Direct 1:1 mapping with Figma SDS Variables (@color_primitives)
+ */
+:root {
+  /* Black Palette */
+  --sds-color-black-100: #0c0c0d0d;
+  --sds-color-black-200: #0c0c0d1a;
+  --sds-color-black-300: #0c0c0d33;
+  --sds-color-black-400: #0c0c0d66;
+  --sds-color-black-500: #0c0c0db2;
+  --sds-color-black-600: #0c0c0dcc;
+  --sds-color-black-700: #0c0c0dd9;
+  --sds-color-black-800: #0c0c0de5;
+  --sds-color-black-900: #0c0c0df2;
+  --sds-color-black-1000: #0c0c0d;
+
+  /* White Palette */
+  --sds-color-white-100: #ffffff0d;
+  --sds-color-white-200: #ffffff1a;
+  --sds-color-white-300: #ffffff33;
+  --sds-color-white-400: #ffffff66;
+  --sds-color-white-500: #ffffffb2;
+  --sds-color-white-600: #ffffffcc;
+  --sds-color-white-700: #ffffffd9;
+  --sds-color-white-800: #ffffffe5;
+  --sds-color-white-900: #fffffff2;
+  --sds-color-white-1000: #ffffff;
+
+  /* Brand Palette */
+  --sds-color-brand-100: #f5f5f5;
+  --sds-color-brand-200: #e6e6e6;
+  --sds-color-brand-300: #d9d9d9;
+  --sds-color-brand-400: #b3b3b3;
+  --sds-color-brand-500: #757575;
+  --sds-color-brand-600: #444444;
+  --sds-color-brand-700: #383838;
+  --sds-color-brand-800: #2c2c2c;
+  --sds-color-brand-900: #1e1e1e;
+  --sds-color-brand-1000: #111111;
+
+  /* Gray Palette */
+  --sds-color-gray-100: #f5f5f5;
+  --sds-color-gray-200: #e6e6e6;
+  --sds-color-gray-300: #d9d9d9;
+  --sds-color-gray-400: #b3b3b3;
+  --sds-color-gray-500: #757575;
+  --sds-color-gray-600: #444444;
+  --sds-color-gray-700: #383838;
+  --sds-color-gray-800: #2c2c2c;
+  --sds-color-gray-900: #1e1e1e;
+  --sds-color-gray-1000: #111111;
+
+  /* Slate Palette */
+  --sds-color-slate-100: #f3f3f3;
+  --sds-color-slate-200: #e3e3e3;
+  --sds-color-slate-300: #cdcdcd;
+  --sds-color-slate-400: #b2b2b2;
+  --sds-color-slate-500: #949494;
+  --sds-color-slate-600: #767676;
+  --sds-color-slate-700: #5a5a5a;
+  --sds-color-slate-800: #434343;
+  --sds-color-slate-900: #303030;
+  --sds-color-slate-1000: #242424;
+
+  /* Green (Success / Positive) Palette */
+  --sds-color-green-100: #ebffee;
+  --sds-color-green-200: #cff7d3;
+  --sds-color-green-300: #aff4c6;
+  --sds-color-green-400: #85e0a3;
+  --sds-color-green-500: #14ae5c;
+  --sds-color-green-600: #009951;
+  --sds-color-green-700: #008043;
+  --sds-color-green-800: #02542d;
+  --sds-color-green-900: #024023;
+  --sds-color-green-1000: #062d1b;
+
+  /* Red (Danger / Error) Palette */
+  --sds-color-red-100: #fee9e7;
+  --sds-color-red-200: #fdd3d0;
+  --sds-color-red-300: #fcb3ad;
+  --sds-color-red-400: #f4776a;
+  --sds-color-red-500: #ec221f;
+  --sds-color-red-600: #c00f0c;
+  --sds-color-red-700: #900b09;
+  --sds-color-red-800: #690807;
+  --sds-color-red-900: #4d0b0a;
+  --sds-color-red-1000: #300603;
+
+  /* Yellow (Warning) Palette */
+  --sds-color-yellow-100: #fffbeb;
+  --sds-color-yellow-200: #fff1c2;
+  --sds-color-yellow-300: #ffe8a3;
+  --sds-color-yellow-400: #e8b931;
+  --sds-color-yellow-500: #e5a000;
+  --sds-color-yellow-600: #bf6a02;
+  --sds-color-yellow-700: #975102;
+  --sds-color-yellow-800: #682d03;
+  --sds-color-yellow-900: #522504;
+  --sds-color-yellow-1000: #401b01;
+
+  /* Pink Palette */
+  --sds-color-pink-100: #fcf1fd;
+  --sds-color-pink-200: #fae1fa;
+  --sds-color-pink-300: #f5c0ef;
+  --sds-color-pink-400: #f19edc;
+  --sds-color-pink-500: #ea3fb8;
+  --sds-color-pink-600: #d732a8;
+  --sds-color-pink-700: #ba2a92;
+  --sds-color-pink-800: #8a226f;
+  --sds-color-pink-900: #57184a;
+  --sds-color-pink-1000: #3f1536;
+}
+
