@@ -1,3 +1,3 @@
 // Barrel export for all components
-export {};
+export * from './data-display/Avatar';
 

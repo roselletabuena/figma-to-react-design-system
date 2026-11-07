@@ -96,6 +96,11 @@
   --spacing-sds-2400: var(--sds-size-space-2400);
   --spacing-sds-4000: var(--sds-size-space-4000);
 
+  /* SDS Icon / Avatar Sizes (size-sds-icon-*) */
+  --spacing-sds-icon-small: var(--sds-size-icon-small);
+  --spacing-sds-icon-medium: var(--sds-size-icon-medium);
+  --spacing-sds-icon-large: var(--sds-size-icon-large);
+
   /* SDS Radii */
   --radius-sds-100: var(--sds-size-radius-100);
   --radius-sds-200: var(--sds-size-radius-200);
