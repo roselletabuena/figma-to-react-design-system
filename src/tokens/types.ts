@@ -43,7 +43,18 @@ export type SDSSpacing =
   | '2400'
   | '4000';
 
+export type SDSSpacingNegative =
+  | '100'
+  | '200'
+  | '300'
+  | '400'
+  | '600'
+  | '800'
+  | '1600';
+
 export type SDSRadius = '100' | '200' | '400' | 'full';
+
+export type SDSRadiusRole = 'small' | 'base' | 'large' | 'full';
 
 export type SDSDepth = '0' | '025' | '100' | '200' | '400' | '800' | '1200';
 
@@ -73,5 +84,7 @@ export type SDSTypographyRole =
   | 'body-link'
   | 'body-small'
   | 'body-small-strong'
-  | 'body-code';
+  | 'body-code'
+  | 'single-line-body-base'
+  | 'single-line-body-small-strong';
 

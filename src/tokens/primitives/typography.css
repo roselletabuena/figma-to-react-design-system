@@ -39,5 +39,16 @@
   --sds-typography-weight-extra-bold-italic: 800 italic;
   --sds-typography-weight-black: 900;
   --sds-typography-weight-black-italic: 900 italic;
+
+  /* Line Heights */
+  --sds-typography-line-height-100: 1;        /* 100% - Single-line elements (buttons, inputs) */
+  --sds-typography-line-height-120: 1.2;      /* 120% - Titles and Headings */
+  --sds-typography-line-height-130: 1.3;      /* 130% - Monospace Code */
+  --sds-typography-line-height-140: 1.4;      /* 140% - Multiline Body */
+
+  /* Letter Spacing (Tracking) */
+  --sds-typography-letter-spacing-hero: -0.03em;
+  --sds-typography-letter-spacing-heading: -0.02em;
+  --sds-typography-letter-spacing-normal: 0em;
 }
 

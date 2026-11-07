@@ -52,6 +52,11 @@ export const sdsTokens = {
         tertiary: 'var(--sds-color-background-positive-tertiary)',
       },
       disabled: 'var(--sds-color-background-disabled-default)',
+      utilities: {
+        blanket: 'var(--sds-color-background-utilities-blanket)',
+        overlay: 'var(--sds-color-background-utilities-overlay)',
+        scrim: 'var(--sds-color-background-utilities-scrim)',
+      },
     },
     text: {
       brand: {
@@ -105,12 +110,26 @@ export const sdsTokens = {
       disabled: 'var(--sds-color-border-disabled-default)',
     },
     icon: {
-      brand: 'var(--sds-color-icon-brand-default)',
-      default: 'var(--sds-color-icon-default-default)',
-      secondary: 'var(--sds-color-icon-default-secondary)',
+      brand: {
+        default: 'var(--sds-color-icon-brand-default)',
+        onBrand: 'var(--sds-color-icon-brand-on-brand)',
+        secondary: 'var(--sds-color-icon-brand-secondary)',
+        tertiary: 'var(--sds-color-icon-brand-tertiary)',
+      },
+      default: {
+        default: 'var(--sds-color-icon-default-default)',
+        secondary: 'var(--sds-color-icon-default-secondary)',
+        tertiary: 'var(--sds-color-icon-default-tertiary)',
+      },
+      neutral: {
+        default: 'var(--sds-color-icon-neutral-default)',
+        secondary: 'var(--sds-color-icon-neutral-secondary)',
+        tertiary: 'var(--sds-color-icon-neutral-tertiary)',
+      },
       danger: 'var(--sds-color-icon-danger-default)',
       warning: 'var(--sds-color-icon-warning-default)',
       positive: 'var(--sds-color-icon-positive-default)',
+      disabled: 'var(--sds-color-icon-disabled-default)',
     },
   },
   size: {
@@ -128,12 +147,24 @@ export const sdsTokens = {
       1600: 'var(--sds-size-space-1600)',
       2400: 'var(--sds-size-space-2400)',
       4000: 'var(--sds-size-space-4000)',
+      negative: {
+        100: 'var(--sds-size-space-negative-100)',
+        200: 'var(--sds-size-space-negative-200)',
+        300: 'var(--sds-size-space-negative-300)',
+        400: 'var(--sds-size-space-negative-400)',
+        600: 'var(--sds-size-space-negative-600)',
+        800: 'var(--sds-size-space-negative-800)',
+        1600: 'var(--sds-size-space-negative-1600)',
+      },
     },
     radius: {
       100: 'var(--sds-size-radius-100)',
       200: 'var(--sds-size-radius-200)',
       400: 'var(--sds-size-radius-400)',
       full: 'var(--sds-size-radius-full)',
+      small: 'var(--sds-size-radius-100)',
+      base: 'var(--sds-size-radius-200)',
+      large: 'var(--sds-size-radius-400)',
     },
     icon: {
       small: 'var(--sds-size-icon-small)',
@@ -160,6 +191,20 @@ export const sdsTokens = {
       bodySmall: 'var(--sds-font-body-small)',
       bodySmallStrong: 'var(--sds-font-body-small-strong)',
       bodyCode: 'var(--sds-font-body-code)',
+      singleLineBodyBase: 'var(--sds-font-single-line-body-base)',
+      singleLineBodySmallStrong: 'var(--sds-font-single-line-body-small-strong)',
+    },
+    lineHeight: {
+      single: 'var(--sds-typography-single-line-height)',
+      tight: 'var(--sds-typography-heading-line-height)',
+      code: 'var(--sds-typography-code-line-height)',
+      base: 'var(--sds-typography-body-line-height)',
+    },
+    letterSpacing: {
+      hero: 'var(--sds-typography-letter-spacing-title-hero)',
+      page: 'var(--sds-typography-letter-spacing-title-page)',
+      heading: 'var(--sds-typography-letter-spacing-heading-base)',
+      normal: 'var(--sds-typography-letter-spacing-default)',
     },
   },
   elevation: {

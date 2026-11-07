@@ -55,6 +55,8 @@
   --sds-size-space-negative-300: -0.75rem;
   --sds-size-space-negative-400: -1rem;
   --sds-size-space-negative-600: -1.5rem;
+  --sds-size-space-negative-800: -2rem;
+  --sds-size-space-negative-1600: -4rem;
 
   /* Stroke / Border Widths */
   --sds-size-stroke-border: 0.0625rem;      /* 1px */

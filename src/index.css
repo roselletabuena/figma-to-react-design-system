@@ -38,17 +38,38 @@
   --color-positive-hover: var(--sds-color-background-positive-hover);
   --color-positive-secondary: var(--sds-color-background-positive-secondary);
 
+  /* Semantic Utility Overlays */
+  --color-blanket: var(--sds-color-background-utilities-blanket);
+  --color-overlay: var(--sds-color-background-utilities-overlay);
+  --color-scrim: var(--sds-color-background-utilities-scrim);
+
   /* Semantic Typography Colors */
   --color-text-default: var(--sds-color-text-default-default);
   --color-text-secondary: var(--sds-color-text-default-secondary);
   --color-text-tertiary: var(--sds-color-text-default-tertiary);
   --color-text-brand: var(--sds-color-text-brand-default);
   --color-text-brand-on-brand: var(--sds-color-text-brand-on-brand);
+  --color-text-brand-secondary: var(--sds-color-text-brand-secondary);
+  --color-text-brand-tertiary: var(--sds-color-text-brand-tertiary);
   --color-text-neutral: var(--sds-color-text-neutral-default);
   --color-text-danger: var(--sds-color-text-danger-default);
   --color-text-warning: var(--sds-color-text-warning-default);
   --color-text-positive: var(--sds-color-text-positive-default);
   --color-text-disabled: var(--sds-color-text-disabled-default);
+
+  /* Semantic Icon Colors */
+  --color-icon-default: var(--sds-color-icon-default-default);
+  --color-icon-secondary: var(--sds-color-icon-default-secondary);
+  --color-icon-tertiary: var(--sds-color-icon-default-tertiary);
+  --color-icon-brand: var(--sds-color-icon-brand-default);
+  --color-icon-brand-on-brand: var(--sds-color-icon-brand-on-brand);
+  --color-icon-brand-secondary: var(--sds-color-icon-brand-secondary);
+  --color-icon-brand-tertiary: var(--sds-color-icon-brand-tertiary);
+  --color-icon-neutral: var(--sds-color-icon-neutral-default);
+  --color-icon-danger: var(--sds-color-icon-danger-default);
+  --color-icon-warning: var(--sds-color-icon-warning-default);
+  --color-icon-positive: var(--sds-color-icon-positive-default);
+  --color-icon-disabled: var(--sds-color-icon-disabled-default);
 
   /* Semantic Border Colors */
   --color-border-default: var(--sds-color-border-default-default);
@@ -86,6 +107,16 @@
   --font-serif: var(--sds-typography-family-serif);
   --font-mono: var(--sds-typography-family-mono);
 
+  /* SDS Letter Spacing */
+  --tracking-hero: var(--sds-typography-letter-spacing-title-hero);
+  --tracking-heading: var(--sds-typography-letter-spacing-heading-base);
+
+  /* SDS Line Heights */
+  --leading-single: var(--sds-typography-single-line-height);
+  --leading-tight: var(--sds-typography-heading-line-height);
+  --leading-code: var(--sds-typography-code-line-height);
+  --leading-base: var(--sds-typography-body-line-height);
+
   /* SDS Elevation Shadows */
   --shadow-sds-100: var(--sds-effects-shadows-drop-shadow-100);
   --shadow-sds-200: var(--sds-effects-shadows-drop-shadow-200);
@@ -113,4 +144,65 @@ body {
   margin: 0;
   background-color: var(--sds-color-background-default-default);
   color: var(--sds-color-text-default-default);
+}
+
+/* SDS Typography Utilities */
+@utility font-title-hero {
+  font: var(--sds-font-title-hero);
+  letter-spacing: var(--sds-typography-letter-spacing-title-hero);
+}
+
+@utility font-title-page {
+  font: var(--sds-font-title-page);
+  letter-spacing: var(--sds-typography-letter-spacing-title-page);
+}
+
+@utility font-subtitle {
+  font: var(--sds-font-subtitle);
+}
+
+@utility font-heading {
+  font: var(--sds-font-heading);
+  letter-spacing: var(--sds-typography-letter-spacing-heading-base);
+}
+
+@utility font-subheading {
+  font: var(--sds-font-subheading);
+}
+
+@utility font-body-base {
+  font: var(--sds-font-body-base);
+}
+
+@utility font-body-strong {
+  font: var(--sds-font-body-strong);
+}
+
+@utility font-body-emphasis {
+  font: var(--sds-font-body-emphasis);
+}
+
+@utility font-body-link {
+  font: var(--sds-font-body-link);
+  text-decoration: underline;
+}
+
+@utility font-body-small {
+  font: var(--sds-font-body-small);
+}
+
+@utility font-body-small-strong {
+  font: var(--sds-font-body-small-strong);
+}
+
+@utility font-body-code {
+  font: var(--sds-font-body-code);
+}
+
+@utility font-single-line-base {
+  font: var(--sds-font-single-line-body-base);
+}
+
+@utility font-single-line-small-strong {
+  font: var(--sds-font-single-line-body-small-strong);
 }
