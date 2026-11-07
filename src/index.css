@@ -10,6 +10,7 @@
   --color-surface-secondary-hover: var(--sds-color-background-default-secondary-hover);
   --color-surface-tertiary: var(--sds-color-background-default-tertiary);
   --color-surface-tertiary-hover: var(--sds-color-background-default-tertiary-hover);
+  --color-surface-disabled: var(--sds-color-background-disabled-default);
 
   /* Semantic Brand Colors */
   --color-brand: var(--sds-color-background-brand-default);
@@ -23,6 +24,7 @@
   --color-neutral-hover: var(--sds-color-background-neutral-hover);
   --color-neutral-secondary: var(--sds-color-background-neutral-secondary);
   --color-neutral-tertiary: var(--sds-color-background-neutral-tertiary);
+  --color-neutral-tertiary-hover: var(--sds-color-background-neutral-tertiary-hover);
 
   /* Semantic Feedback Colors */
   --color-danger: var(--sds-color-background-danger-default);
@@ -77,6 +79,7 @@
   --color-border-tertiary: var(--sds-color-border-default-tertiary);
   --color-border-brand: var(--sds-color-border-brand-default);
   --color-border-brand-secondary: var(--sds-color-border-brand-secondary);
+  --color-border-neutral-secondary: var(--sds-color-border-neutral-secondary);
   --color-border-danger: var(--sds-color-border-danger-default);
   --color-border-warning: var(--sds-color-border-warning-default);
   --color-border-positive: var(--sds-color-border-positive-default);
