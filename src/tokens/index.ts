@@ -215,5 +215,29 @@ export const sdsTokens = {
     500: 'var(--sds-effects-shadows-drop-shadow-500)',
     600: 'var(--sds-effects-shadows-drop-shadow-600)',
   },
+  effects: {
+    dropShadow: {
+      100: 'var(--sds-effects-shadows-drop-shadow-100)',
+      200: 'var(--sds-effects-shadows-drop-shadow-200)',
+      300: 'var(--sds-effects-shadows-drop-shadow-300)',
+      400: 'var(--sds-effects-shadows-drop-shadow-400)',
+      500: 'var(--sds-effects-shadows-drop-shadow-500)',
+      600: 'var(--sds-effects-shadows-drop-shadow-600)',
+    },
+    innerShadow: {
+      100: 'var(--sds-effects-shadows-inner-shadow-100)',
+      200: 'var(--sds-effects-shadows-inner-shadow-200)',
+      300: 'var(--sds-effects-shadows-inner-shadow-300)',
+      400: 'var(--sds-effects-shadows-inner-shadow-400)',
+      500: 'var(--sds-effects-shadows-inner-shadow-500)',
+      600: 'var(--sds-effects-shadows-inner-shadow-600)',
+    },
+    blur: {
+      overlay: 'var(--sds-effects-backdrop-filter-blur-overlay)',
+      blanket: 'var(--sds-effects-backdrop-filter-blur-blanket)',
+      glass: 'var(--sds-effects-backdrop-filter-blur-glass)',
+      layer: 'var(--sds-effects-filter-blur-layer)',
+    },
+  },
 } as const;
 

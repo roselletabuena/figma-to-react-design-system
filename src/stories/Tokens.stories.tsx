@@ -650,3 +650,166 @@ export const Typography: Story = {
     );
   },
 };
+
+export const Effects: Story = {
+  render: () => {
+    const elevationLevels = [
+      { level: '100', desc: 'Subtle card border & baseline surface', token: '--sds-effects-shadows-drop-shadow-100', innerToken: '--sds-effects-shadows-inner-shadow-100', tailwind: 'shadow-sds-100' },
+      { level: '200', desc: 'Interactive card hover & dropdown lift', token: '--sds-effects-shadows-drop-shadow-200', innerToken: '--sds-effects-shadows-inner-shadow-200', tailwind: 'shadow-sds-200' },
+      { level: '300', desc: 'Floating toolbars & small menus', token: '--sds-effects-shadows-drop-shadow-300', innerToken: '--sds-effects-shadows-inner-shadow-300', tailwind: 'shadow-sds-300' },
+      { level: '400', desc: 'Flyouts, popovers & sticky panels', token: '--sds-effects-shadows-drop-shadow-400', innerToken: '--sds-effects-shadows-inner-shadow-400', tailwind: 'shadow-sds-400' },
+      { level: '500', desc: 'Drawers & bottom action sheets', token: '--sds-effects-shadows-drop-shadow-500', innerToken: '--sds-effects-shadows-inner-shadow-500', tailwind: 'shadow-sds-500' },
+      { level: '600', desc: 'Global modals, dialogs & alerts', token: '--sds-effects-shadows-drop-shadow-600', innerToken: '--sds-effects-shadows-inner-shadow-600', tailwind: 'shadow-sds-600' },
+    ];
+
+    const blurEffects = [
+      {
+        name: 'Overlay',
+        type: 'Backdrop Filter',
+        desc: 'Modal backdrops and dimmed sheets with 50% opacity wash',
+        className: 'backdrop-blur-sds-overlay bg-black/50 text-white',
+        token: '--sds-effects-backdrop-filter-blur-overlay',
+      },
+      {
+        name: 'Blanket',
+        type: 'Backdrop Filter',
+        desc: 'High-contrast blackout backdrops with 70% opacity wash',
+        className: 'backdrop-blur-sds-blanket bg-black/70 text-white',
+        token: '--sds-effects-backdrop-filter-blur-blanket',
+      },
+      {
+        name: 'Glass',
+        type: 'Backdrop Filter',
+        desc: 'Frosted glass navigation headers and floating surfaces',
+        className: 'backdrop-blur-sds-glass bg-white/80 dark:bg-black/60 text-text-default border border-white/20',
+        token: '--sds-effects-backdrop-filter-blur-glass',
+      },
+      {
+        name: 'Layer',
+        type: 'Element Filter',
+        desc: 'Direct blur applied to background images or artwork',
+        className: 'blur-sds-layer bg-brand text-text-brand-on-brand',
+        token: '--sds-effects-filter-blur-layer',
+      },
+    ];
+
+    return (
+      <div className="flex flex-col gap-10 p-6 max-w-6xl font-sans text-text-default">
+        <div>
+          <h2 className="text-2xl font-bold mb-2">Effects Foundation (@effects)</h2>
+          <p className="text-text-secondary text-sm">
+            Complete elevation, inner depth, and atmospheric blur system from Figma SDS node 226-13682.
+          </p>
+        </div>
+
+        {/* Note from Figma */}
+        <div className="p-4 rounded-sds-200 border border-border-brand bg-brand-secondary text-text-default text-xs leading-relaxed">
+          <span className="font-bold">Elevation Customization:</span> To change the effects within the Simple Design System to look like your brand, change the depth offsets and opacity values stored within each Style.
+        </div>
+
+        {/* 1. Drop Shadows */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-lg font-bold border-b border-border-default pb-1">1. Drop Shadows (Elevation 100–600)</h3>
+          <p className="text-xs text-text-secondary">
+            Ambient and directional shadows illustrating elevation height above the canvas. Shown frameless (left) and with border (right) as in Figma.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {elevationLevels.map((item) => (
+              <div
+                key={item.level}
+                className="flex flex-col p-4 rounded-sds-200 border border-border-default bg-surface-secondary gap-4"
+              >
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-bold">Level {item.level}</span>
+                  <code className="text-[10px] text-text-secondary">{item.tailwind}</code>
+                </div>
+                <div className="flex items-center justify-around gap-3 p-4 bg-surface rounded-sds-100">
+                  {/* Frameless */}
+                  <div
+                    className="w-16 h-16 rounded-sds-200 bg-surface flex items-center justify-center text-[10px] font-semibold text-text-secondary"
+                    style={{ boxShadow: `var(${item.token})` }}
+                  >
+                    Clean
+                  </div>
+                  {/* With Border */}
+                  <div
+                    className="w-16 h-16 rounded-sds-200 bg-surface border border-border-default flex items-center justify-center text-[10px] font-semibold text-text-secondary"
+                    style={{ boxShadow: `var(${item.token})` }}
+                  >
+                    Border
+                  </div>
+                </div>
+                <p className="text-[11px] text-text-secondary">{item.desc}</p>
+                <code className="text-[9px] text-text-secondary break-all font-mono">{item.token}</code>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 2. Inner Shadows */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-lg font-bold border-b border-border-default pb-1">2. Inner Shadows (Inset Depth 100–600)</h3>
+          <p className="text-xs text-text-secondary">
+            Recessed shadows used for sunken wells, active/pressed button states, input troughs, and tactile elements.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+            {elevationLevels.map((item) => (
+              <div
+                key={item.level}
+                className="flex flex-col p-3 rounded-sds-200 border border-border-default bg-surface gap-3 items-center text-center"
+              >
+                <div
+                  className="w-16 h-16 rounded-sds-200 bg-surface-secondary border border-border-default flex items-center justify-center text-xs font-bold text-text-secondary"
+                  style={{ boxShadow: `var(${item.innerToken})` }}
+                >
+                  {item.level}
+                </div>
+                <div>
+                  <div className="text-xs font-bold">Inner {item.level}</div>
+                  <code className="text-[8px] text-text-secondary break-all block mt-1">
+                    {item.innerToken}
+                  </code>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 3. Blur Effects */}
+        <div className="flex flex-col gap-4">
+          <h3 className="text-lg font-bold border-b border-border-default pb-1">3. Blur & Frosted Glass Effects</h3>
+          <p className="text-xs text-text-secondary">
+            Backdrop filter blurs for modal curtains, floating navigations, and direct layer blurs.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {blurEffects.map((item) => (
+              <div
+                key={item.name}
+                className="flex flex-col p-3 rounded-sds-200 border border-border-default bg-surface gap-3"
+              >
+                <div className="text-xs font-bold flex justify-between items-center">
+                  <span>{item.name}</span>
+                  <span className="text-[10px] text-text-secondary font-normal">{item.type}</span>
+                </div>
+                {/* Visual container with rich pattern underneath */}
+                <div className="relative w-full h-28 rounded-sds-100 overflow-hidden flex items-center justify-center p-3 bg-gradient-to-tr from-brand-secondary via-brand to-neutral">
+                  <div className="absolute inset-0 flex items-center justify-center text-white/20 font-black text-2xl select-none">
+                    BACKGROUND
+                  </div>
+                  <div
+                    className={`relative z-10 w-full h-full rounded-sds-100 flex flex-col items-center justify-center p-2 text-center shadow-xs ${item.className}`}
+                  >
+                    <span className="text-xs font-bold">{item.name}</span>
+                    <span className="text-[9px] opacity-80 mt-0.5">2px Blur</span>
+                  </div>
+                </div>
+                <p className="text-[11px] text-text-secondary">{item.desc}</p>
+                <code className="text-[9px] text-text-secondary break-all font-mono">{item.token}</code>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  },
+};

@@ -124,6 +124,14 @@
   --shadow-sds-400: var(--sds-effects-shadows-drop-shadow-400);
   --shadow-sds-500: var(--sds-effects-shadows-drop-shadow-500);
   --shadow-sds-600: var(--sds-effects-shadows-drop-shadow-600);
+
+  /* SDS Inner Shadows */
+  --shadow-sds-inner-100: var(--sds-effects-shadows-inner-shadow-100);
+  --shadow-sds-inner-200: var(--sds-effects-shadows-inner-shadow-200);
+  --shadow-sds-inner-300: var(--sds-effects-shadows-inner-shadow-300);
+  --shadow-sds-inner-400: var(--sds-effects-shadows-inner-shadow-400);
+  --shadow-sds-inner-500: var(--sds-effects-shadows-inner-shadow-500);
+  --shadow-sds-inner-600: var(--sds-effects-shadows-inner-shadow-600);
 }
 
 /* Custom variant for manual dark mode toggling */
@@ -205,4 +213,21 @@ body {
 
 @utility font-single-line-small-strong {
   font: var(--sds-font-single-line-body-small-strong);
+}
+
+/* SDS Blur Utilities */
+@utility backdrop-blur-sds-overlay {
+  backdrop-filter: var(--sds-effects-backdrop-filter-blur-overlay);
+}
+
+@utility backdrop-blur-sds-blanket {
+  backdrop-filter: var(--sds-effects-backdrop-filter-blur-blanket);
+}
+
+@utility backdrop-blur-sds-glass {
+  backdrop-filter: var(--sds-effects-backdrop-filter-blur-glass);
+}
+
+@utility blur-sds-layer {
+  filter: var(--sds-effects-filter-blur-layer);
 }

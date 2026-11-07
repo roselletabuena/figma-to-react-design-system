@@ -47,6 +47,7 @@
 
   /* Filter Blurs */
   --sds-effects-backdrop-filter-blur-overlay: blur(var(--sds-size-blur-100));
+  --sds-effects-backdrop-filter-blur-blanket: blur(var(--sds-size-blur-100));
   --sds-effects-backdrop-filter-blur-glass: blur(var(--sds-size-blur-100));
   --sds-effects-filter-blur-layer: blur(var(--sds-size-blur-100));
 }

@@ -60,6 +60,10 @@ export type SDSDepth = '0' | '025' | '100' | '200' | '400' | '800' | '1200';
 
 export type SDSElevationLevel = '100' | '200' | '300' | '400' | '500' | '600';
 
+export type SDSEffectShadowType = 'drop-shadow' | 'inner-shadow';
+
+export type SDSBlurRole = 'overlay' | 'blanket' | 'glass' | 'layer';
+
 export type SDSTypographyScale =
   | '01'
   | '02'
