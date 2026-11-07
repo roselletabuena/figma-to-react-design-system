@@ -25,18 +25,18 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
 }) => {
   return (
     <header
-      className="relative flex items-center justify-between w-full max-w-[412px] h-16 px-1 py-2 bg-[#FEF7FF] text-[#1D1B20] box-border select-none"
+      className="relative flex items-center justify-between w-full max-w-[412px] h-16 px-sds-100 py-sds-200 bg-surface text-text-default border-b border-border-default box-border select-none transition-colors"
       role="banner"
     >
       {/* Leading Navigation Icon */}
       <div className="flex items-center justify-center w-12 h-12 z-10">
         <button
           type="button"
-          className="group flex items-center justify-center w-12 h-12 p-0 bg-transparent border-none rounded-full cursor-pointer focus:outline-none text-[#1D1B20]"
+          className="group flex items-center justify-center w-12 h-12 p-0 bg-transparent border-none rounded-sds-full cursor-pointer focus:outline-none text-text-default"
           onClick={onNavigationClick}
           aria-label="Navigation menu"
         >
-          <span className="flex items-center justify-center w-10 h-10 rounded-full transition-colors group-hover:bg-[#1D1B20]/8 group-focus-visible:bg-[#1D1B20]/12 group-active:bg-[#1D1B20]/12">
+          <span className="flex items-center justify-center w-10 h-10 rounded-sds-full transition-colors group-hover:bg-surface-secondary group-focus-visible:bg-surface-tertiary group-active:bg-surface-tertiary">
             <svg
               className="w-6 h-6 block"
               viewBox="0 0 24 24"
@@ -55,11 +55,11 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
 
       {/* Centered Title & Supporting Text */}
       <div className="absolute left-14 right-14 flex flex-col items-center justify-center text-center pointer-events-none">
-        <h1 className="m-0 w-full text-[22px] leading-7 font-normal text-[#1D1B20] truncate">
+        <h1 className="m-0 w-full text-[22px] leading-7 font-normal text-text-default truncate">
           {title}
         </h1>
         {supportingText && (
-          <p className="m-0 w-full text-xs font-medium leading-4 tracking-[0.5px] text-[#49454F] truncate">
+          <p className="m-0 w-full text-xs font-medium leading-4 tracking-[0.5px] text-text-secondary truncate">
             {supportingText}
           </p>
         )}
@@ -72,7 +72,7 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
         ) : (
           <button
             type="button"
-            className="flex items-center justify-center w-12 h-12 p-0 bg-transparent border-none rounded-full cursor-pointer focus:outline-none"
+            className="flex items-center justify-center w-12 h-12 p-0 bg-transparent border-none rounded-sds-full cursor-pointer focus:outline-none"
             onClick={onAvatarClick}
             aria-label="User avatar"
           >
@@ -80,11 +80,11 @@ export const TopAppBar: React.FC<TopAppBarProps> = ({
               <img
                 src={avatarUrl}
                 alt="Avatar"
-                className="w-8 h-8 rounded-full object-cover block"
+                className="w-8 h-8 rounded-sds-full object-cover block"
               />
             ) : (
               <div
-                className="flex items-center justify-center w-8 h-8 rounded-full bg-[#E6E0E9] text-[#49454F]"
+                className="flex items-center justify-center w-8 h-8 rounded-sds-full bg-surface-secondary text-text-secondary transition-colors"
                 aria-hidden="true"
               >
                 <svg
