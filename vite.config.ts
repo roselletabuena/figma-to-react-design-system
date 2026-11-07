@@ -40,6 +40,25 @@ export default defineConfig({
   test: {
     projects: [
       {
+        // Component unit tests (`*.test.tsx`), run in a real browser like the story tests.
+        extends: true,
+        test: {
+          name: 'unit',
+          include: ['src/**/*.test.{ts,tsx}'],
+          setupFiles: ['./vitest.setup.ts'],
+          browser: {
+            enabled: true,
+            headless: true,
+            provider: playwright({}),
+            instances: [
+              {
+                browser: 'chromium',
+              },
+            ],
+          },
+        },
+      },
+      {
         extends: true,
         plugins: [
           storybookTest({
