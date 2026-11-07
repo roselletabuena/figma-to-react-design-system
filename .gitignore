@@ -26,6 +26,10 @@ dist-ssr
 *storybook.log
 storybook-static
 
+# Test run artifacts
+.vitest
+test-results
+
 # Graphify
 graphify-out/
 __pycache__/
