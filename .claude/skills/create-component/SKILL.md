@@ -39,5 +39,13 @@ Use this skill whenever asked to create, implement, or scaffold a new component 
    - Run `npm run lint` to confirm zero lint errors.
    - Ensure WCAG AA contrast and no raw hex/color values are used.
 
-5. **Open the Pull Request**:
-   - Once step 4 passes, follow the `create-component-pr` skill: it captures Storybook screenshots of every variant and size in light and dark mode, and opens a PR whose description embeds them for review.
+5. **Update the Figma status tracker** (`docs/figma-component-status.md`):
+   - Skip this step only if the component has no Figma counterpart.
+   - Find the component's row (match the name; the row's Figma link points at the source node). Set Status `todo` → `done`, Code → `` `src/components/<category>/<ComponentName>` ``, and Implemented → today's date as `YYYY-MM-DD` (`date +%F` in bash, `Get-Date -Format yyyy-MM-dd` in PowerShell).
+   - If the component was built together with its primitives (rows with Kind `primitive`, such as `Pagination Page` under `Pagination`), mark each of those rows done with the same code path and date.
+   - Update the counts: the `(done/total)` in that page's heading and the `Progress:` line at the top. Count the rows containing `| done |` instead of adding by hand.
+   - If there is no row for the component (a new Figma component the tracker does not list yet), add one under the matching page section, creating the section if the page is new, and bump the totals.
+   - Commit this file together with the component so the PR shows the tracker change.
+
+6. **Open the Pull Request**:
+   - Once steps 4 and 5 are done, follow the `create-component-pr` skill: it captures Storybook screenshots of every variant and size in light and dark mode, and opens a PR whose description embeds them for review.
