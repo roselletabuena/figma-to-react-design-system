@@ -19,6 +19,12 @@
       "skillPath": "plugins/git-workflows/skills/git-atomic-commit/SKILL.md",
       "computedHash": "45214b62c5a8627876021e3254517397e9485428ed4a52af978e83b1cca9419a"
     },
+    "git-branch-cleanup": {
+      "source": "roselletabuena/skills",
+      "sourceType": "github",
+      "skillPath": "plugins/git-workflows/skills/git-branch-cleanup/SKILL.md",
+      "computedHash": "7294d76cb28d511fb94d688e4aedf2b5100d4e5ebc38e7ed980bc6bf7f69ea2b"
+    },
     "graphify": {
       "source": "graphify-labs/graphify",
       "sourceType": "github",
