@@ -52,12 +52,15 @@ Turn a finished component into a pull request a reviewer can judge without runni
      -f head=<branch> -f base=main -F body=@<body-file> --jq .html_url
    ```
    If the session supplies a PR attribution line, end the body with it. Give the user the PR URL.
+   Where `gh` is restricted (for example a session that only allows the GitHub MCP tools), open the PR with `create_pull_request` (as a draft) and change it with `update_pull_request` instead. Those tools can corrupt image URLs, so step 6 is mandatory there; see [If the body is corrupted](#if-the-body-is-corrupted).
 
-6. **Verify the body renders images.** The count must be two per story in `manifest.json` (light and dark), and none may sit inside backticks:
+6. **Verify the body renders images. This is a gate: do not report the PR as done, tick the checklist, or quote an image count until it passes.** Read the body back from GitHub; what you sent is not proof of what was stored. The count must be two per story in `manifest.json` (light and dark), and none may sit inside backticks:
    ```bash
    gh api "repos/$REPO/pulls/<number>" --jq .body | grep -o '<img src="https://github.com/[^"]*' | wc -l
    gh api "repos/$REPO/pulls/<number>" --jq .body | grep -c '`.*<img'   # expect 0
+   gh api "repos/$REPO/pulls/<number>" --jq .body | grep -c '&lt;img\|`https://'   # expect 0
    ```
+   Without `gh`, read the body with `pull_request_read` (method `get`) and check the same by eye: every screenshot is a literal `<img src="https://...">`, with no `&lt;`, no backtick runs around a URL, and the count matches. If it does not, go to [If the body is corrupted](#if-the-body-is-corrupted).
 
 7. **After review feedback**: commit the fix, then repeat steps 2, 3 (with the new short SHA) and update the body so the screenshots match the final code:
    ```bash
@@ -116,8 +119,18 @@ These steps also run in Claude Code on the web / `claude --cloud`, where the VM 
 - **Visual baselines are per OS.** Playwright names them `...-chromium-linux.png` or `...-chromium-win32.png`. A component whose baselines exist only for Windows fails `npm run test:visual` on Linux. Say so in the PR instead of treating it as caused by the new component.
 - **Git version.** The publish script falls back to `git checkout --orphan` when Git is older than 2.42.
 
+## If the body is corrupted
+
+Seen with the GitHub MCP body writer: after a create or update, some screenshot URLs come back wrapped in runs of backticks (and `<` escaped as `&lt;`), so those images show as text. The same content produces the same corruption every time, so resending it, renaming files or changing alt text does not help.
+
+1. Resend the body once, then stop; do not loop.
+2. Prefer the REST path in step 5 (`gh api -X PATCH`). If `gh` is not permitted, ask the user to allow it for this repo.
+3. As a last resort, put each still-broken image's URL as plain text on its own line (bare URLs were not corrupted), and tell the user exactly which images are links rather than inline, and why.
+4. Never state that all screenshots render unless the read-back in step 6 proved it.
+
 ## Notes
 
 - The links use `https://github.com/<owner>/<repo>/blob/<sha>/<path>?raw=true`, which renders in PR descriptions for private and public repos.
+- `.claude/skills/create-component-pr` and `.agents/skills/create-component-pr` are mirrors (the scripts are invoked from the `.agents` path). Change both together.
 - Re-running the publish script with identical images creates no new commit and prints the existing URLs.
 - Scripts need `@playwright/test` (already a devDependency), Git (2.42 or newer is not required, see above), and a logged-in `gh` (in cloud sessions the proxy authenticates `gh api` for you).
