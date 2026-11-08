@@ -18,6 +18,7 @@ All UI components must adhere to the 5-file co-located structure and include Sto
 - Category layout: `src/components/<category>/<ComponentName>/`
 - Co-located files: `.tsx`, `.types.ts`, `.stories.tsx`, `.test.tsx`, `index.ts`
 - Barrel export in `src/components/index.ts` and `src/index.ts`
+- Pull request: when a component is finished, open a PR whose description embeds a screenshot of every variant and size in light and dark mode, following [`.agents/skills/create-component-pr`](.agents/skills/create-component-pr/SKILL.md). It works in cloud sessions too (see its "Cloud sessions" section). Never merge the PR.
 
 ---
 
