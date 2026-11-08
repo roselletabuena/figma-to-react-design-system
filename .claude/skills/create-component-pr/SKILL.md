@@ -97,6 +97,7 @@ Use `<img width="...">` so large images do not blow up the table.
 ## Changes
 - `src/components/<category>/<ComponentName>/` (component, types, stories, unit tests, visual spec, barrel)
 - Barrel exports in `src/components/index.ts`
+- `docs/figma-component-status.md` (component marked done, with its code path and implementation date)
 
 ## Checks
 - [x] `npm run build`
