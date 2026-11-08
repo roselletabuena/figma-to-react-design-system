@@ -101,7 +101,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 | Checkbox Group | component | [9762:1426](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1426) | todo |  |  |
 | Radio Field | component | [9762:1412](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1412) | todo |  |  |
 | Radio Group | component | [624:23642](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=624-23642) | todo |  |  |
-| Input Field | component | [2136:2263](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2136-2263) | todo |  |  |
+| Input Field | component | [2136:2263](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2136-2263) | done | `src/components/forms/InputField` | 2026-11-08 |
 | Textarea Field | component | [9762:3088](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-3088) | todo |  |  |
 | Select Field | component | [2136:2336](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2136-2336) | todo |  |  |
 | Search | component | [2236:14989](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2236-14989) | todo |  |  |
