@@ -31,6 +31,7 @@
   --color-danger-hover: var(--sds-color-background-danger-hover);
   --color-danger-secondary: var(--sds-color-background-danger-secondary);
   --color-danger-tertiary: var(--sds-color-background-danger-tertiary);
+  --color-danger-tertiary-hover: var(--sds-color-background-danger-tertiary-hover);
 
   --color-warning: var(--sds-color-background-warning-default);
   --color-warning-hover: var(--sds-color-background-warning-hover);
@@ -55,6 +56,7 @@
   --color-text-brand-tertiary: var(--sds-color-text-brand-tertiary);
   --color-text-neutral: var(--sds-color-text-neutral-default);
   --color-text-danger: var(--sds-color-text-danger-default);
+  --color-text-danger-on-danger: var(--sds-color-text-danger-on-danger);
   --color-text-warning: var(--sds-color-text-warning-default);
   --color-text-positive: var(--sds-color-text-positive-default);
   --color-text-disabled: var(--sds-color-text-disabled-default);
@@ -81,6 +83,7 @@
   --color-border-brand-secondary: var(--sds-color-border-brand-secondary);
   --color-border-neutral-secondary: var(--sds-color-border-neutral-secondary);
   --color-border-danger: var(--sds-color-border-danger-default);
+  --color-border-danger-secondary: var(--sds-color-border-danger-secondary);
   --color-border-warning: var(--sds-color-border-warning-default);
   --color-border-positive: var(--sds-color-border-positive-default);
   --color-border-disabled: var(--sds-color-border-disabled-default);
