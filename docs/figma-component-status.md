@@ -21,7 +21,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Button | component | [4185:3778](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4185-3778) | done | `src/components/actions/Button` | 2026-11-08 |
 | Button Danger | component | [185:852](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=185-852) | done | `src/components/actions/ButtonDanger` | 2026-11-08 |
-| Icon Button | component | [11:11508](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=11-11508) | todo |  |  |
+| Icon Button | component | [11:11508](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=11-11508) | done | `src/components/actions/IconButton` | 2026-11-08 |
 | Button Group | component | [2072:9432](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2072-9432) | todo |  |  |
 
 ## Avatars (1/3)
