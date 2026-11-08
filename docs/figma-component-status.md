@@ -4,7 +4,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 - **Figma file:** [Simple Design System (Community) (Copy)](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-)
 - **Last synced:** 2026-11-08
-- **Progress:** 3 of 82 done, 79 to do
+- **Progress:** 5 of 82 done, 77 to do
 
 ## How to use this file
 
@@ -13,7 +13,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 - **Primitive** rows are building blocks that sit under a larger component in Figma (for example `Pagination Page` under `Pagination`). Build them together with their parent unless they need to be exported on their own.
 - Not covered here: the Foundations, Icons, Examples, Composition guide, Forms, Sections, Utilities and Component Playground pages.
 
-## Buttons (2/4)
+## Buttons (3/4)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=128-10284)
 
@@ -34,13 +34,13 @@ Tracks which components in the Simple Design System Figma file have been built i
 | Avatar Block | component | [2010:15581](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2010-15581) | todo |  |  |
 | Avatar Group | component | [56:15608](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=56-15608) | todo |  |  |
 
-## Accordion (0/2)
+## Accordion (1/2)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=128-10528)
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Accordion Item | component | [7753:4634](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7753-4634) | todo |  |  |
+| Accordion Item | component | [7753:4634](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7753-4634) | done | `src/components/data-display/AccordionItem` | 2026-11-09 |
 | Accordion | component | [7753:4779](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7753-4779) | todo |  |  |
 
 ## AI Chat (0/6)
