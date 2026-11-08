@@ -4,7 +4,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 - **Figma file:** [Simple Design System (Community) (Copy)](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-)
 - **Last synced:** 2026-11-08
-- **Progress:** 3 of 82 done, 79 to do
+- **Progress:** 5 of 82 done, 77 to do
 
 ## How to use this file
 
@@ -68,13 +68,13 @@ Tracks which components in the Simple Design System Figma file have been built i
 | Calendar Month Field | primitive | [4333:10557](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-10557) | todo |  |  |
 | Calendar Year Field | primitive | [4333:12221](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-12221) | todo |  |  |
 
-## Cards (0/7)
+## Cards (1/7)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2143-13485)
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Card | component | [2142:11380](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2142-11380) | todo |  |  |
+| Card | component | [2142:11380](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2142-11380) | done | `src/components/data-display/Card` | 2026-11-09 |
 | Product Info Card | component | [7753:4465](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7753-4465) | todo |  |  |
 | Testimonial Card | component | [7717:3946](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7717-3946) | todo |  |  |
 | Stats Card | component | [2236:15082](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2236-15082) | todo |  |  |
