@@ -7,6 +7,8 @@
  *
  * <story-id-prefix> is the Storybook story id up to the double dash, for example
  * `components-data-display-avatar`. Storybook must already be running (`npm run storybook`).
+ * Set CHROME_PATH to use an installed Chrome instead of Playwright's bundled Chromium
+ * (cloud sessions set it already).
  *
  * Writes `<story>-light.png`, `<story>-dark.png` and `manifest.json` into <out-dir>.
  * The `DarkMode` story is skipped: dark is captured for every story instead.
@@ -46,7 +48,20 @@ if (stories.length === 0) {
 }
 
 await mkdir(outDir, { recursive: true });
-const browser = await chromium.launch();
+// Cloud sessions ship Chrome at $CHROME_PATH and cannot always download Playwright's own
+// Chromium, so prefer it when set. Locally this falls through to Playwright's bundled browser.
+const executablePath = process.env.CHROME_PATH || undefined;
+let browser;
+try {
+  browser = await chromium.launch({ executablePath });
+} catch (error) {
+  console.error(
+    `Could not launch a browser${executablePath ? ` from CHROME_PATH (${executablePath})` : ''}.\n` +
+      'Set CHROME_PATH to a Chrome/Chromium binary, or run `npx playwright install chromium`.\n' +
+      error.message,
+  );
+  process.exit(1);
+}
 // Light is pinned so the OS colour scheme never leaks into the captures.
 const context = await browser.newContext({
   viewport: { width: 1000, height: 800 },

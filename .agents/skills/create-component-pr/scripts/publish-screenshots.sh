@@ -10,7 +10,8 @@
 #   [remote]           defaults to origin
 #
 # Optional: COMMIT_TRAILER="Co-Authored-By: ..." adds an attribution line to the commit.
-# Prints one "<file> <image-url>" line per image.
+#           GITHUB_REPO=owner/repo overrides the owner/repo parsed from the remote URL.
+# Prints one "<file> <image-url>" line per image (stdout) and "repo: owner/repo" (stderr).
 set -euo pipefail
 
 SRC=${1:?screenshots dir required}
@@ -36,8 +37,13 @@ PNGS=("$SRC"/*.png)
 
 if git -C "$ROOT" fetch --quiet "$REMOTE" "$BRANCH" 2>/dev/null; then
   git -C "$ROOT" worktree add --quiet --detach "$TMP" FETCH_HEAD
+elif git -C "$ROOT" worktree add --quiet --orphan -b "$BRANCH" "$TMP" 2>/dev/null; then
+  CREATED=1 # Git 2.42 or newer
 else
-  git -C "$ROOT" worktree add --quiet --orphan -b "$BRANCH" "$TMP"
+  # Older Git has no `worktree add --orphan`: detach, then switch to an unborn, empty branch.
+  git -C "$ROOT" worktree add --quiet --detach "$TMP" HEAD
+  git -C "$TMP" checkout --quiet --orphan "$BRANCH"
+  git -C "$TMP" rm -rfq .
   CREATED=1
 fi
 
@@ -53,8 +59,12 @@ fi
 
 SHA=$(git -C "$TMP" rev-parse HEAD)
 URL=$(git -C "$ROOT" remote get-url "$REMOTE" 2>/dev/null || echo "$REMOTE")
-# https://github.com/owner/repo(.git) or git@github.com:owner/repo(.git) -> owner/repo
-SLUG=$(echo "$URL" | sed -E 's#^(https://github\.com/|git@github\.com:)##; s#\.git$##')
+# owner/repo is the last two path segments of the remote, whatever the host part looks like:
+#   https://github.com/owner/repo.git, git@github.com:owner/repo.git,
+#   http://local_proxy@127.0.0.1:1234/git/owner/repo (cloud sessions go through a git proxy).
+# Set GITHUB_REPO=owner/repo to override.
+SLUG=${GITHUB_REPO:-$(echo "$URL" | sed -E 's#/+$##; s#\.git$##; s#.*[/:]([^/:]+/[^/:]+)$#\1#')}
+echo "repo: $SLUG" >&2
 
 for f in "${PNGS[@]}"; do
   name=$(basename "$f")

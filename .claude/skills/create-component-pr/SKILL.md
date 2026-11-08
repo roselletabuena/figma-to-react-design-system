@@ -39,19 +39,30 @@ Turn a finished component into a pull request a reviewer can judge without runni
      COMMIT_TRAILER="<attribution line from the session>" \
        bash .agents/skills/create-component-pr/scripts/publish-screenshots.sh <out-dir> <component-kebab>/<short-sha-of-branch-tip>
      ```
-   - It creates `pr-assets` as an orphan branch on first use, pushes, and prints one `<file> <url>` line per image. Use those URLs verbatim in the PR body.
+   - It creates `pr-assets` as an orphan branch on first use, pushes, and prints one `<file> <url>` line per image on stdout, plus `repo: <owner>/<repo>` on stderr. Use the URLs verbatim in the PR body and keep the repo slug for step 5.
    - Pushing `pr-assets` is outward-facing: only do it as part of opening the PR the user asked for.
 
-4. **Write the PR body** to a file (outside the repo), using the template below.
+4. **Write the PR body** to a file (outside the repo), using the template below. Every screenshot is an `<img src="<url>">` tag with a URL printed in step 3. Never put a URL or an `<img>` tag inside backticks or a code block (it then shows as literal text instead of an image), and never link the Playwright baseline PNGs in `*.visual.spec.ts-snapshots/` (that opens GitHub's file page, not an image).
 
-5. **Push and open the PR**
+5. **Push and open the PR** with the REST API. `gh pr create` and `gh pr edit` use GraphQL, which cloud sessions block (see [Cloud sessions](#cloud-sessions)); `gh api` works everywhere.
    ```bash
-   git push -u origin feat/<component-name-kebab>
-   gh pr create --base main --title "feat: add <ComponentName> component" --body-file <body-file>
+   REPO=<owner>/<repo>   # the `repo:` line from step 3
+   git push -u origin <branch>   # feat/<component-name-kebab>, or the branch the session assigned
+   gh api "repos/$REPO/pulls" -f title="feat: add <ComponentName> component" \
+     -f head=<branch> -f base=main -F body=@<body-file> --jq .html_url
    ```
    If the session supplies a PR attribution line, end the body with it. Give the user the PR URL.
 
-6. **After review feedback**: commit the fix, then repeat steps 2, 3 (with the new short SHA) and `gh pr edit --body-file` so the screenshots match the final code.
+6. **Verify the body renders images.** The count must be two per story in `manifest.json` (light and dark), and none may sit inside backticks:
+   ```bash
+   gh api "repos/$REPO/pulls/<number>" --jq .body | grep -o '<img src="https://github.com/[^"]*' | wc -l
+   gh api "repos/$REPO/pulls/<number>" --jq .body | grep -c '`.*<img'   # expect 0
+   ```
+
+7. **After review feedback**: commit the fix, then repeat steps 2, 3 (with the new short SHA) and update the body so the screenshots match the final code:
+   ```bash
+   gh api -X PATCH "repos/$REPO/pulls/<number>" -F body=@<body-file>
+   ```
 
 ## PR body template
 
@@ -94,8 +105,19 @@ Use `<img width="...">` so large images do not blow up the table.
 
 Rows come from `manifest.json`: one row per story, in the order captured. If a prop has a size or shape that no story shows on its own, it must still appear in the "All variants and sizes" matrix.
 
+## Cloud sessions
+
+These steps also run in Claude Code on the web / `claude --cloud`, where the VM differs from a local machine:
+
+- **`gh pr` / `gh issue` are blocked.** The GitHub proxy rejects GraphQL with a 403 (`GitHub GraphQL is not available from Claude Code sessions`). Steps 5 to 7 use `gh api` (REST) for that reason. Do not fall back to a PR body that only links the committed baseline images.
+- **Browser.** The VM has Chrome at `$CHROME_PATH`; `capture-screenshots.mjs` uses it automatically. Do not run `npx playwright install`: Playwright's download host may not be reachable.
+- **`origin` is a proxy URL**, not `github.com`. `publish-screenshots.sh` reads `owner/repo` from its last two path segments. If the `repo:` line it prints is wrong, re-run with `GITHUB_REPO=<owner>/<repo>`.
+- **Working branch.** If the session assigned one (cloud sessions use `claude/<name>`), commit, push and open the PR from it instead of creating `feat/<component-name-kebab>`.
+- **Visual baselines are per OS.** Playwright names them `...-chromium-linux.png` or `...-chromium-win32.png`. A component whose baselines exist only for Windows fails `npm run test:visual` on Linux. Say so in the PR instead of treating it as caused by the new component.
+- **Git version.** The publish script falls back to `git checkout --orphan` when Git is older than 2.42.
+
 ## Notes
 
 - The links use `https://github.com/<owner>/<repo>/blob/<sha>/<path>?raw=true`, which renders in PR descriptions for private and public repos.
 - Re-running the publish script with identical images creates no new commit and prints the existing URLs.
-- Scripts need `@playwright/test` (already a devDependency), Git 2.42 or newer, and a logged-in `gh`.
+- Scripts need `@playwright/test` (already a devDependency), Git (2.42 or newer is not required, see above), and a logged-in `gh` (in cloud sessions the proxy authenticates `gh api` for you).
