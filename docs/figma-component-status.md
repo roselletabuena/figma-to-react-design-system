@@ -180,7 +180,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Text | component | [2087:8487](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2087-8487) | todo |  |  |
+| Text | component | [2087:8487](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2087-8487) | done | `src/components/data-display/Text` | 2026-11-09 |
 | Text Small | component | [2087:8484](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2087-8484) | todo |  |  |
 | Text Strong | component | [2087:8486](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2087-8486) | todo |  |  |
 | Text Emphasis | component | [2087:8485](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2087-8485) | todo |  |  |
