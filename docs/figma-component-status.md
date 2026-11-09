@@ -74,7 +74,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Card | component | [2142:11380](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2142-11380) | todo |  |  |
+| Card | component | [2142:11380](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2142-11380) | done | `src/components/data-display/Card` | 2026-11-08 |
 | Product Info Card | component | [7753:4465](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7753-4465) | todo |  |  |
 | Testimonial Card | component | [7717:3946](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=7717-3946) | todo |  |  |
 | Stats Card | component | [2236:15082](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2236-15082) | todo |  |  |
