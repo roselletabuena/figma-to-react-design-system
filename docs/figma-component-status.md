@@ -97,7 +97,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Checkbox Field | component | [9762:1441](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1441) | todo |  |  |
+| Checkbox Field | component | [9762:1441](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1441) | done | `src/components/forms/CheckboxField` | 2026-11-09 |
 | Checkbox Group | component | [9762:1426](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1426) | todo |  |  |
 | Radio Field | component | [9762:1412](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1412) | todo |  |  |
 | Radio Group | component | [624:23642](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=624-23642) | todo |  |  |
