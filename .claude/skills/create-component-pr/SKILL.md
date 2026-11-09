@@ -49,7 +49,7 @@ Turn a finished component into a pull request a reviewer can judge without runni
    REPO=<owner>/<repo>   # the `repo:` line from step 3
    git push -u origin <branch>   # feat/<component-name-kebab>, or the branch the session assigned
    gh api "repos/$REPO/pulls" -f title="feat: add <ComponentName> component" \
-     -f head=<branch> -f base=main -F body=@<body-file> --jq .html_url
+     -f head=<branch> -f base=main -F draft=true -F body=@<body-file> --jq .html_url
    ```
    If the session supplies a PR attribution line, end the body with it. Give the user the PR URL.
    Where `gh` is restricted (for example a session that only allows the GitHub MCP tools), open the PR with `create_pull_request` (as a draft) and change it with `update_pull_request` instead. Those tools can corrupt image URLs, so step 6 is mandatory there; see [If the body is corrupted](#if-the-body-is-corrupted).
