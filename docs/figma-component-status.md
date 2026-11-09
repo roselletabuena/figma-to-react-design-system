@@ -161,7 +161,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Tab | component | [3729:12963](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=3729-12963) | todo |  |  |
+| Tab | component | [3729:12963](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=3729-12963) | done | `src/components/navigation/Tab` | 2026-11-09 |
 | Tabs | component | [3729:13362](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=3729-13362) | todo |  |  |
 
 ## Tags (0/3)
