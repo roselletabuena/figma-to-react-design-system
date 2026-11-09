@@ -4,7 +4,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 - **Figma file:** [Simple Design System (Community) (Copy)](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-)
 - **Last synced:** 2026-11-08
-- **Progress:** 3 of 82 done, 79 to do
+- **Progress:** 5 of 82 done, 77 to do
 
 ## How to use this file
 
@@ -13,7 +13,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 - **Primitive** rows are building blocks that sit under a larger component in Figma (for example `Pagination Page` under `Pagination`). Build them together with their parent unless they need to be exported on their own.
 - Not covered here: the Foundations, Icons, Examples, Composition guide, Forms, Sections, Utilities and Component Playground pages.
 
-## Buttons (2/4)
+## Buttons (3/4)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=128-10284)
 
@@ -91,7 +91,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 | Dialog Body | component | [9762:696](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-696) | todo |  |  |
 | Dialog | component | [192:31534](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=192-31534) | todo |  |  |
 
-## Inputs (0/12)
+## Inputs (1/12)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=128-10423)
 
@@ -99,7 +99,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Checkbox Field | component | [9762:1441](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1441) | todo |  |  |
 | Checkbox Group | component | [9762:1426](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1426) | todo |  |  |
-| Radio Field | component | [9762:1412](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1412) | todo |  |  |
+| Radio Field | component | [9762:1412](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1412) | done | `src/components/forms/RadioField` | 2026-11-09 |
 | Radio Group | component | [624:23642](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=624-23642) | todo |  |  |
 | Input Field | component | [2136:2263](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2136-2263) | todo |  |  |
 | Textarea Field | component | [9762:3088](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-3088) | todo |  |  |
