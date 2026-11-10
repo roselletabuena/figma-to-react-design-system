@@ -170,7 +170,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Tag | component | [56:8830](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=56-8830) | todo |  |  |
+| Tag | component | [56:8830](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=56-8830) | done | `src/components/data-display/Tag` | 2026-11-08 |
 | Tag Toggle | component | [157:10316](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=157-10316) | todo |  |  |
 | Tag Toggle Group | component | [157:10352](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=157-10352) | todo |  |  |
 
