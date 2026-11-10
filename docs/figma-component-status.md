@@ -4,7 +4,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 - **Figma file:** [Simple Design System (Community) (Copy)](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-)
 - **Last synced:** 2026-11-08
-- **Progress:** 3 of 82 done, 79 to do
+- **Progress:** 5 of 82 done, 77 to do
 
 ## How to use this file
 
@@ -56,14 +56,14 @@ Tracks which components in the Simple Design System Figma file have been built i
 | AI Chat → User message | component | [4317:10907](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4317-10907) | todo |  |  |
 | AI Chat Box | component | [4309:7636](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4309-7636) | todo |  |  |
 
-## Calendar (0/5)
+## Calendar (1/5)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-9150)
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Calendar | component | [4333:9262](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-9262) | todo |  |  |
-| Calendar Button | primitive | [4333:9359](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-9359) | todo |  |  |
+| Calendar Button | primitive | [4333:9359](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-9359) | done | `src/components/forms/CalendarButton` | 2026-11-10 |
 | Calendar Select Group | primitive | [4333:10858](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-10858) | todo |  |  |
 | Calendar Month Field | primitive | [4333:10557](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-10557) | todo |  |  |
 | Calendar Year Field | primitive | [4333:12221](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=4333-12221) | todo |  |  |
