@@ -4,7 +4,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 - **Figma file:** [Simple Design System (Community) (Copy)](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-)
 - **Last synced:** 2026-11-08
-- **Progress:** 3 of 82 done, 79 to do
+- **Progress:** 5 of 82 done, 77 to do
 
 ## How to use this file
 
@@ -24,14 +24,14 @@ Tracks which components in the Simple Design System Figma file have been built i
 | Icon Button | component | [11:11508](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=11-11508) | done | `src/components/actions/IconButton` | 2026-11-08 |
 | Button Group | component | [2072:9432](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2072-9432) | todo |  |  |
 
-## Avatars (1/3)
+## Avatars (2/3)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=128-10526)
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Avatar | component | [9762:1103](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1103) | done | `src/components/data-display/Avatar` | 2026-11-08 |
-| Avatar Block | component | [2010:15581](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2010-15581) | todo |  |  |
+| Avatar Block | component | [2010:15581](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=2010-15581) | done | `src/components/data-display/AvatarBlock` | 2026-11-10 |
 | Avatar Group | component | [56:15608](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=56-15608) | todo |  |  |
 
 ## Accordion (0/2)
