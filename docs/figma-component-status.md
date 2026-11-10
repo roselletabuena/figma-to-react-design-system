@@ -4,7 +4,7 @@ Tracks which components in the Simple Design System Figma file have been built i
 
 - **Figma file:** [Simple Design System (Community) (Copy)](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-)
 - **Last synced:** 2026-11-08
-- **Progress:** 3 of 82 done, 79 to do
+- **Progress:** 4 of 82 done, 78 to do
 
 ## How to use this file
 
@@ -91,13 +91,13 @@ Tracks which components in the Simple Design System Figma file have been built i
 | Dialog Body | component | [9762:696](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-696) | todo |  |  |
 | Dialog | component | [192:31534](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=192-31534) | todo |  |  |
 
-## Inputs (0/12)
+## Inputs (1/12)
 
 [Open page in Figma](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=128-10423)
 
 | Component | Kind | Figma | Status | Code | Implemented |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Checkbox Field | component | [9762:1441](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1441) | todo |  |  |
+| Checkbox Field | component | [9762:1441](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1441) | done | `src/components/forms/CheckboxField` | 2026-11-11 |
 | Checkbox Group | component | [9762:1426](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1426) | todo |  |  |
 | Radio Field | component | [9762:1412](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=9762-1412) | todo |  |  |
 | Radio Group | component | [624:23642](https://www.figma.com/design/GtVNN7mIai1mAV6sHvqiiv/Simple-Design-System--Community---Copy-?node-id=624-23642) | todo |  |  |
